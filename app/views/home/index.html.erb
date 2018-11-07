@@ -1,0 +1,7 @@
+<h1>Home#index</h1>
+<% @offers.each do |offer| %>
+  <p>Name: <%= offer.name %></p>
+  <p>Description: <%= offer.description %></p>
+  <p>Price: <%= offer.actual_price %></p>
+  <br>
+<% end %>
