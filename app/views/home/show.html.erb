@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <p>Name: <%= @offer.name %></p>
+        <p>Description: <%= @offer.description %></p>
+        <p>Price: <%= @offer.actual_price %></p>
+        <br>
+      </div>
+  </div>
+</div>
+<br>
+Add comment:
+<%= form_for @comment do |f| %>
+  <%= f.label :text %><%= f.text_field :text %><br>
+  <%= f.hidden_field :offer_id, value: @offer.id %>
+  <%= f.submit %>
+<% end %>
+<br>
+Comments:
+<% @offer.comments.each do |comment| %>
+  <div class="col">
+    <p>User: <%= comment.user.email %></p>
+    <p>Text: <%= comment.text %></p>
+    <% if comment.user == current_user %>
+      <%= link_to "Delete", comment, method: :delete %>
+    <% end %>
+    <br>
+  </div>
+<% end %>

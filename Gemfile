@@ -28,7 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.5'
+
+gem "paperclip", "~> 6.0.0"
 
 gem 'jquery-rails'
 

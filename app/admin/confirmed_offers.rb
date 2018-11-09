@@ -1,4 +1,4 @@
-ActiveAdmin.register Offer do
+ActiveAdmin.register Offer, as: "Confirmed Offer" do
   index do
     selectable_column
     column :name
@@ -37,7 +37,11 @@ ActiveAdmin.register Offer do
 
   controller do
     def scoped_collection
-      end_of_association_chain.where(tags: current_admin_user.tags)
+      if current_admin_user.email == 'admin@example.com'
+        end_of_association_chain.where(confirmed: true)
+      else
+        end_of_association_chain.where(confirmed: true).where(tags: current_admin_user.tags)
+      end
     end
   end
 end

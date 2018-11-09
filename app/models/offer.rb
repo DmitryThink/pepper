@@ -1,10 +1,13 @@
 class Offer < ApplicationRecord
   # create for score counting
   has_and_belongs_to_many :users
-  # create for adding offer by user
+  # create for adding offers by user
   belongs_to :user
   has_and_belongs_to_many :tags
   has_many :comments
+
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   validates :name, :description, :actual_price, :original_price, :url, presence: true
   validates :url,  uniqueness: true
@@ -15,6 +18,6 @@ class Offer < ApplicationRecord
   end
 
   def discount
-    actual_price * 100 / original_price
+    (100 - actual_price * 100 / original_price).round(2)
   end
 end

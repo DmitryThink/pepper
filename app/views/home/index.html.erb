@@ -1,7 +1,26 @@
 <h1>Home#index</h1>
-<% @offers.each do |offer| %>
-  <p>Name: <%= offer.name %></p>
-  <p>Description: <%= offer.description %></p>
-  <p>Price: <%= offer.actual_price %></p>
-  <br>
+
+<h2>Search</h2>
+<%= form_tag(home_index_path, method: :get) do %>
+  Word <%= text_field_tag :text, @search_text %>
+  <%= submit_tag 'Search', class:"btn btn-default" %>
 <% end %>
+<br>
+<% if user_signed_in? %>
+  <%= link_to 'Add new offers', offers_path, class:"btn btn-default" %>
+<% end %>
+<br>
+<div class="container">
+  <div class="row">
+    <% @offers.each do |offer| %>
+      <div class="col-sm-2">
+        <%= link_to '-', offer_path(offer, offer: {value: '-'}), method: :put %> <%= offer.score %> <%= link_to '+', offer_path(offer, offer: {value: '+'}), method: :put %>
+        <%= image_tag offer.avatar.url(:medium) %>
+      <p>Name: <%= offer.name %></p>
+      <p>Description: <%= offer.description %></p>
+      <p>Price: <%= offer.actual_price %></p>
+        <%= link_to 'Show', offer, method: :get %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -7,7 +7,7 @@ ActiveAdmin.register Comment, as: "Offers Comment" do
           ids << offer.id
         end
       end
-      end_of_association_chain.where(offer: ids)
+      end_of_association_chain
     end
   end
 end
