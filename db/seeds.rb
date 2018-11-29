@@ -19,4 +19,4 @@ offer2.save!
 amd.tags << tag1
 amd.save!
 
-Comment.create!(offers: offer1, text: 'Woow! Thi is very good kompik!', user: user)
+Comment.create!(offer: offer1, text: 'Woow! Thi is very good kompik!', user: user)

@@ -1,26 +1,46 @@
-<h1>Home#index</h1>
-
-<h2>Search</h2>
-<%= form_tag(home_index_path, method: :get) do %>
-  Word <%= text_field_tag :text, @search_text %>
-  <%= submit_tag 'Search', class:"btn btn-default" %>
-<% end %>
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'Add new offers', offers_path, class:"btn btn-default" %>
-<% end %>
-<br>
-<div class="container">
-  <div class="row">
-    <% @offers.each do |offer| %>
-      <div class="col-sm-2">
-        <%= link_to '-', offer_path(offer, offer: {value: '-'}), method: :put %> <%= offer.score %> <%= link_to '+', offer_path(offer, offer: {value: '+'}), method: :put %>
-        <%= image_tag offer.avatar.url(:medium) %>
-      <p>Name: <%= offer.name %></p>
-      <p>Description: <%= offer.description %></p>
-      <p>Price: <%= offer.actual_price %></p>
-        <%= link_to 'Show', offer, method: :get %>
+<% @offers.each do |offer| %>
+<div class="py-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-3 p-3">
+            <div class="card box-shadow">
+              <div class="card-header">
+                <ul class="nav card-header-pills">
+                  <li class="nav-item ">
+                    <%= link_to '-', offer_path(offer, offer: {value: '-'}), method: :put %>
+                    <button type="button" class="btn btn-sm btn-outline-info"><i class="fa fa-minus icon-counter" aria-hidden="true"></i></button>
+                  </li>
+                  <li class="nav-item text-center text-danger counter mx-1"><i class="fa fa-thermometer-half mr-1" aria-hidden="true"></i><%= offer.score %></li>
+                  <li class="nav-item">
+                    <%= link_to '+', offer_path(offer, offer: {value: '+'}), method: :put %>
+                    <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-plus icon-counter" aria-hidden="true"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <%= image_tag offer.avatar.url(:medium), class: "card-img-top" %>
+              <div class="card-body">
+                <p class="card-title mb-1"><%= offer.name %></p>
+                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                <p class="card-text"><%= offer.description %></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-sm btn-primary " href="#">Go</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="#">View</a>
+                    <%= link_to 'Show', offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
+                  </div> <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+              <div class="card-footer">I'm footer!</div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3"></div>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
+<% end %>

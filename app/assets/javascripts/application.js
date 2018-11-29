@@ -14,5 +14,5 @@
 
 //= require bootstrap-sprockets
 //= require activestorage
-//= require turbolinks
-//= require_tree .
+//= require navbar-ontop.js
+//= require parallax.js
