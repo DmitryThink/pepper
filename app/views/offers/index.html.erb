@@ -1,10 +1,86 @@
-<h1>Offer#index</h1>
-<%= form_for( @offer, :html => {:multipart => true}) do |f| %>
-  <%= f.label :name %><%= f.text_field :name %><br>
-  <%= f.label :description %><%= f.text_field :description %><br>
-  <%= f.label :original_price %><%= f.text_field :original_price %><br>
-  <%= f.label :actual_price %><%= f.text_field :actual_price %><br>
-  <%= f.label :url %><%= f.text_field :url %><br>
-  <%= f.label :avatar %><%= f.file_field :avatar %><br>
-  <%= f.submit %>
-<% end %>
+<!--<div class="nav-scroller bg-white shadow-sm">-->
+<!--  <nav class="nav nav-underline">-->
+<!--    <a class="nav-link active" href="#">Dodaj</a>-->
+<!--    <a class="nav-link" href="#">-->
+<!--      Wiadomości-->
+<!--      <span class="badge badge-pill bg-dark align-text-bottom">27</span>-->
+<!--    </a>-->
+<!--    <a class="nav-link" href="#">Profil</a>-->
+
+<!--  </nav>-->
+<!--</div>-->
+<!--<div class="container-fluid bg-primary ">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12">-->
+<!--      <h2 class="text-center m-2">Jesteś super!</h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<main role="main" class="container">
+
+  <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
+    <h4 class="border-bottom border-gray pb-2 mb-0">Dodaj nową okazję</h4>
+    <%= form_for(@offer, :html => {:multipart => true}, class: "mx-auto w-75 pt-3") do |f| %>
+      <div class="form-group">
+        <label class="text-dark" for="linkToDealInput">LINK </label><span class="text-muted"> (Opcjonalnie)</span>
+        <%= f.text_field :url,  placeholder: "http://www.example.com/greatdeal..." %>
+<!--        <input type="url" class="form-control" id="linkToDealInput" aria-describedby="linkToDealHelp" placeholder="http://www.example.com/greatdeal...">-->
+        <small id="linkToDealHelp" class="form-text text-muted">Wklej link ze znalezioną okazją lub informacjami o niej.</small>
+      </div>
+
+      <h6 class="border-bottom border-gray">Szczegóły</h6>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="actualPrice">CENA OFERTY</label><span class="text-muted"> (Opcjonalnie)</span>
+          <%= f.text_field :actual_price, class: "form-control", placeholder:"0,00" %>
+<!--          <input type="number" class="form-control" id="actualPrice" placeholder="0,00" value="" required="">-->
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="originalPrice">CENA REGULARNA</label><span class="text-muted"> (Opcjonalnie)</span>
+          <%= f.text_field :original_price, class: "form-control", placeholder:"0,00" %>
+<!--          <input type="number" class="form-control" id="originalPrice" placeholder="0,00" value="" required="">-->
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="titleOffer">TYTUŁ OFERTY</label>
+        <%= f.text_field :name, class: "form-control", placeholder:"Krótki tytuł opisujący znalezioną okazję" %>
+<!--        <input type="text" class="form-control" id="titleOffer" placeholder="Krótki tytuł opisujący znalezioną okazję">-->
+      </div>
+      <div class="form-group">
+        <label for="descriptionOffer">OPIS</label>
+        <%= f.text_area :description, class: "form-control", rows: "4", placeholder:"Opisz znalezioną okazję własnymi słowami. Postaraj się wytłumaczyć, dlaczego jest najlepsza. Nie ograniczaj się tylko do wklejania tekstu...W przypadku ofert z zagranicznych sklepów nie zapomnij dodać w treści ceny zarówno w obcej jak i polskiej walucie ;)" %>
+<!--        <textarea class="form-control" id="descriptionOffer" rows="4" placeholder="Opisz znalezioną okazję własnymi słowami. Postaraj się wytłumaczyć, dlaczego jest najlepsza. Nie ograniczaj się tylko do wklejania tekstu...W przypadku ofert z zagranicznych sklepów nie zapomnij dodać w treści ceny zarówno w obcej jak i polskiej walucie ;)"></textarea>-->
+      </div>
+      <div class="custom-file col-6">
+        <%= f.file_field :avatar, class: "custom-file-input" %>
+<!--        <input type="file" class="custom-file-input" id="customFileLang" lang="es">-->
+        <label class="custom-file-label" for="customFileLang">Dodaj swój obrazek</label>
+      </div>
+      <div class="row pt-4 pb-2">
+        <div class="col-6">
+          <%= f.submit "GO!", class: "btn btn-primary w-100" %>
+<!--          <button  type="submit" class="btn btn-primary w-100">GO!</button>-->
+        </div>
+        <div class="col-6">
+          <button type="reset" class="btn btn-outline-info w-100">Reset</button></div>
+      </div>
+    <% end %>
+  </div>
+</main>
+
+<!--<h1>Offer#index</h1>-->
+<%#= form_for( @offer, :html => {:multipart => true}) do |f| %>
+<!--  <%#= f.label :name %><%#= f.text_field :name %><br>-->
+<!--  <%#= f.label :description %><%#= f.text_field :description %><br>-->
+<!--  <%#= f.label :original_price %><%#= f.text_field :original_price %><br>-->
+<!--  <%#= f.label :actual_price %><%#= f.text_field :actual_price %><br>-->
+<!--  <%#= f.label :url %><%#= f.text_field :url %><br>-->
+<!--  <%#= f.label :avatar %><%#= f.file_field :avatar %><br>-->
+  <%#= f.submit %>
+<%# end %>

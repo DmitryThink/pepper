@@ -2,6 +2,70 @@
     font-size: large;
 }
 .icon-counter {
-    -webkit-text-stroke: 1px whitesmoke;
+    -webkit-text-stroke: 1px whitesmoke;  
+}
+.counter-header{
+    justify-content: space-between;
+}
+.card-title > a {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
+}
+.card-text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+
+.card-title > a:after {
+    top: 20px;
+    height: 20px;
+}
+
+.card-title > a:after {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    width: 3em;
+    background: -webkit-linear-gradient(left,hsla(0,0%,100%,0),#fff 50%,#fff);
+    background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 50%,#fff);
+}
+
+.card-price {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.price {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+.old-price {
+    text-decoration: line-through;
+    margin-right: 1em;
+}
+.brand-name{
+    flex-grow: 2;
+}
+.card-footer {
+    padding: 0.2rem;
     
+}
+p.nickname {
+    margin: 0;
+    align-self: center;
+}
+.small-avatar{
+    align-self: center;
+    width: 1.85714em;
+    height: 1.85714em;
+    margin-right: .28571em;
+    border-radius: 50%;
 }
