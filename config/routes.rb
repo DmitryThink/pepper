@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'home/index'
   post 'home/search'
+  get 'home/new'
+  get 'home/commented'
   resources :offers, only: [ :show ], :controller => :home
   resources :offers, only: [ :index, :create, :update ]
   resources :comments, only: [ :create, :destroy ]
