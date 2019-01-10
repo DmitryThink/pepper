@@ -1,69 +1,77 @@
-<div class="container">
-
-  <div class="row d-flex flex-row">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-4">
-      <div class="card box-shadow">
-        <div class="card-header">
-          <ul class="nav card-header-pills counter-header">
-            <li class="nav-item">
-              <%= link_to raw("<i class=\"fa fa-minus icon-counter\" aria-hidden=\"true\"></i>"), offer_path(@offer, offer: {value: '-'}), method: :put,  class:"btn btn-sm btn-outline-info" %>
-            </li>
-            <li class="nav-item text-center text-danger counter mx-1"><i class="fa fa-thermometer-half mr-1" aria-hidden="true"></i><%= @offer.score %></li>
-            <li class="nav-item">
-              <%= link_to raw("<i class=\"fa fa-plus icon-counter\" aria-hidden=\"true\"></i>"), offer_path(@offer, offer: {value: '+'}), method: :put, class:"btn btn-sm btn-outline-danger"  %>
-            </li>
-          </ul>
-          <!-- <div class="time-left">
-              <i class="fa fa-hourglass-start" aria-hidden="true"></i> 12 god.
-          </div> -->
-        </div>
-        <%= image_tag @offer.avatar.url(:medium), class: "card-img-top" %>
-        <div class="card-body">
-          <p class="card-title font-weight-bold"><a href="#" class="text-dark"><%= @offer.name %></a></p>
-          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-          <div class="card-price d-flex">
-            <span class="price text-primary font-weight-bold" ><%= @offer.actual_price %>zł</span>
-            <span class="old-price text-muted" data-toggle="tooltip" data-placement="right" title="-<%= @offer.discount %>%"><%= @offer.original_price %>zł</span>
-            <a href="#" class="brand-name badge badge-secondary">Amazon</a>
+<div class="py-1">
+  <div class="container">
+    <div class="row d-flex flex-row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-4">
+        <div class="card box-shadow">
+          <div class="card-header">
+            <ul class="nav card-header-pills counter-header">
+              <li class="nav-item">
+                <%= link_to raw("<i class=\"fa fa-minus icon-counter\" aria-hidden=\"true\"></i>"), offer_path(@offer, offer: {value: '-'}), method: :put,  class:"btn btn-sm btn-outline-info" %>
+              </li>
+              <li class="nav-item text-center text-danger counter mx-1"><i class="fa fa-thermometer-half mr-1" aria-hidden="true"></i><%= @offer.score %></li>
+              <li class="nav-item">
+                <%= link_to raw("<i class=\"fa fa-plus icon-counter\" aria-hidden=\"true\"></i>"), offer_path(@offer, offer: {value: '+'}), method: :put, class:"btn btn-sm btn-outline-danger"  %>
+              </li>
+            </ul>
+            <!-- <div class="time-left">
+                <i class="fa fa-hourglass-start" aria-hidden="true"></i> 12 god.
+            </div> -->
           </div>
-          <p class="card-text"><%= @offer.description %></p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <a class="btn btn-sm btn-primary " href="#">Go</a>
-              <%= link_to 'View', @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
-            </div> <small class="text-muted">9 mins</small>
+          <%= image_tag @offer.avatar.url(:medium), class: "card-img-top" %>
+          <div class="card-body">
+            <p class="card-title font-weight-bold"><a href="#" class="text-dark"><%= @offer.name %></a></p>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+            <div class="card-price d-flex">
+              <span class="price text-primary font-weight-bold" ><%= @offer.actual_price %>zł</span>
+              <span class="old-price text-muted" data-toggle="tooltip" data-placement="right" title="-<%= @offer.discount %>%"><%= @offer.original_price %>zł</span>
+              <a href="#" class="brand-name badge badge-secondary">Amazon</a>
+            </div>
+            <p class="card-text"><%= @offer.description %></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-sm btn-primary " href="#">Go</a>
+                <%= link_to 'View', @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
+              </div> <small class="text-muted">9 mins</small>
+            </div>
           </div>
-        </div>
-        <div class="card-footer d-flex flex-row justify-content-between">
-          <div class="d-flex flex-nowrap flex-row">
-            <img class="small-avatar mr-2" src="<%= image_path("ryan.jpg") %>"/>
-            <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.email %>4</a></p>
-          </div>
-          <div class="">
-            <%= link_to raw("<i class=\"fa fa-comments text-secondary\" aria-hidden=\"true\"></i> #{@offer.comments.count}"), @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
+          <div class="card-footer d-flex flex-row justify-content-between">
+            <div class="d-flex flex-nowrap flex-row">
+              <img class="small-avatar mr-2" src="<%= image_path("ryan.jpg") %>"/>
+              <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.email %>4</a></p>
+            </div>
+            <div class="">
+              <%= link_to raw("<i class=\"fa fa-comments text-secondary\" aria-hidden=\"true\"></i> #{@offer.comments.count}"), @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-</div>
+      <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
+        <h4>Add comment:</h4>
+      <%= form_for @comment do |f| %>
+        <div class="form-group">
+          <%= f.text_field :text , class: "form-control"%><br>
 
+        <%= f.hidden_field :offer_id, value: @offer.id %>
+        <%= f.submit "Send", class: "btn btn-primary w-100" %>
+        </div>
+      <% end %>
+      <br>
+        <h4 class="border-bottom border-gray pb-2 mb-0">Comments:</h4>
+
+      <% @offer.comments.each do |comment| %>
+        <div class="col">
+          <p>User: <%= comment.user.email %> <% if comment.user == current_user %>
+              <%= link_to "Delete", comment, method: :delete, class: "btn-danger" %>
+            <% end %></p>
+
+          <p class="border-bottom border-gray pb-2 mb-0">Text: <%= comment.text %></p>
+
+          <br>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+  </div>
 </div>
 <br>
-Add comment:
-<%= form_for @comment do |f| %>
-  <%= f.label :text %><%= f.text_field :text %><br>
-  <%= f.hidden_field :offer_id, value: @offer.id %>
-  <%= f.submit %>
-<% end %>
-<br>
-Comments:
-<% @offer.comments.each do |comment| %>
-  <div class="col">
-    <p>User: <%= comment.user.email %></p>
-    <p>Text: <%= comment.text %></p>
-    <% if comment.user == current_user %>
-      <%= link_to "Delete", comment, method: :delete %>
-    <% end %>
-    <br>
-  </div>
-<% end %>

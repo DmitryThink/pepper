@@ -2,98 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5b3ee1-cf7c-4862-95ea-68ecff378fda" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/offers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/offers_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/001/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/001/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/001/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/001/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/002/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/002/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/002/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/002/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/003/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/003/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/003/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/003/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/004/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/004/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/004/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/004/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/005/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/005/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/005/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/005/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/006/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/006/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/006/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/006/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/007/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/007/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/007/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/007/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/008/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/008/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/008/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/008/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/009/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/009/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/009/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/009/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/010/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/010/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/010/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/010/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/011/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/011/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/011/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/011/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/012/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/012/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/012/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/012/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/013/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/013/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/013/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/013/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/014/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/014/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/014/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/014/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/015/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/015/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/015/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/015/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/016/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/016/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/016/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/016/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/017/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/017/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/017/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/017/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/018/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/018/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/018/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/018/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/019/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/019/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/019/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/019/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/020/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/020/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/020/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/020/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/021/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/021/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/021/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/021/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/022/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/022/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/022/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/022/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/023/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/023/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/023/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/023/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/024/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/024/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/024/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/024/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/025/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/025/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/025/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/025/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/026/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/026/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/026/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/026/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/027/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/027/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/027/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/027/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/028/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/028/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/028/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/028/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/029/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/029/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/029/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/029/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/030/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/030/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/030/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/030/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/031/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/031/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/031/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/031/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/032/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/032/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/032/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/032/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/033/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/033/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/033/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/033/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/034/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/034/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/034/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/034/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/035/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/035/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/035/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/035/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/036/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/036/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/036/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/036/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/037/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/037/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/037/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/037/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/038/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/038/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/038/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/038/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/039/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/039/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/039/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/039/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/040/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/040/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/040/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/040/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/041/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/041/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/041/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/041/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/042/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/042/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/042/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/042/thumb/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/043/medium/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/043/medium/dimg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/system/offers/avatars/000/000/043/thumb/dimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/offers/avatars/000/000/043/thumb/dimg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/offers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/offers/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -107,95 +22,151 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/pepper@Development__pepper.rcov" NAME="Development: pepper Coverage Results" MODIFIED="1547139947196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pepper" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" selection-start-line="32" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/offers/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-267">
-              <caret line="21" column="74" lean-forward="true" selection-start-line="18" selection-end-line="21" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.8533448">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/home/show.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="468">
+                  <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-3460">
+                  <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/offers_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="435">
+                  <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="6" selection-start-column="6" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/routes.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="99" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="99" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="67" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/offers/index.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-310">
+                  <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="51" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="575">
+                  <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/helpers/devise_helper.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -208,8 +179,13 @@
       <find>missing.png</find>
       <find>jquer</find>
       <find>error</find>
+      <find>field&quot;</find>
       <find>Searc</find>
+      <find>Dodaj</find>
     </findStrings>
+    <replaceStrings>
+      <replace>form-group&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -233,7 +209,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20181107155309_add_confirmed_to_offer.rb" />
         <option value="$PROJECT_DIR$/app/admin/confirmed_offers.rb" />
         <option value="$PROJECT_DIR$/app/models/offer.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/offers_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20181107165358_add_avater_to_offer.rb" />
         <option value="$PROJECT_DIR$/app/admin/unconfirmed_offers.rb" />
         <option value="$PROJECT_DIR$/../not-pepper/index.html" />
@@ -250,15 +225,24 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/offers/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/offers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/offers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/show.html.erb" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
@@ -300,6 +284,21 @@
               <item name="pepper" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pepper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pepper" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="devise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pepper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pepper" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="devise" type="462c0819:PsiDirectoryNode" />
+              <item name="sessions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pepper" type="b2602c69:ProjectViewProjectNode" />
@@ -489,12 +488,12 @@
       <workItem from="1543930933799" duration="1219000" />
       <workItem from="1544006094637" duration="18067000" />
       <workItem from="1544097000007" duration="2237000" />
-      <workItem from="1547133819072" duration="2562000" />
+      <workItem from="1547133819072" duration="5480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68129000" />
+    <option name="totallyTimeSpent" value="71047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -505,7 +504,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -526,26 +525,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/now-ui-kit.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/includeHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/navbar-ontop.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20181106151417_create_offers.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -646,13 +625,6 @@
     <entry file="file://$PROJECT_DIR$/public/assets/active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png" />
     <entry file="file://$PROJECT_DIR$/public/assets/active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif" />
     <entry file="file://$PROJECT_DIR$/public/assets/active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif" />
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="16" selection-start-line="41" selection-start-column="18" selection-end-line="42" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -695,57 +667,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" selection-start-line="32" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/offers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267">
-          <caret line="21" column="74" lean-forward="true" selection-start-line="18" selection-end-line="21" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/mailer.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -754,10 +677,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/helpers/devise_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/offers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="99" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3460">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/offers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
         </state>
       </provider>
     </entry>

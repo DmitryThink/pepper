@@ -16,7 +16,7 @@ class OffersController < ApplicationController
     else
       offer.users.delete(current_user)
     end
-    redirect_to '/'
+    redirect_to request.referer
   end
 
   private

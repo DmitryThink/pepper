@@ -1,48 +1,33 @@
 <main role="main" class="container">
-
   <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
-    <h4 class="border-bottom border-gray pb-2 mb-0">Zaloguj się</h4>
-              <div class="row mt-4 pt-2">
-                <div class="col">
+    <h4 class="border-bottom border-gray pb-2 mb-0">Sign in</h4>
+      <div class="row mt-4 pt-2">
+        <div class="col">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="form-group">
+              <label>Email</label>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Login...", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password...", class: "form-control"  %>
+            </div>
 
-                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                    <%= devise_error_messages! %>
-                    <div class="form-group mb-2">
-                      <div class="input-group border-0">
-                        <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">
-                                                    <i class="now-ui-icons users_circle-08 lg"></i>
-                                                    </span>
-                        </div>
-                        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Login...", class: "form-control" %>
-                      </div>
-                    </div>
-
-                    <div class="form-group mb-2">
-                      <div class="input-group border-0">
-                        <div class="input-group-prepend ">
-                                                    <span class="input-group-text" id="basic-addon1">
-                                              <i class="now-ui-icons text_caps-small lg"></i>
-                                            </span>
-                        </div>
-                        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password...", class: "form-control"  %>
-                      </div>
-                    </div>
-
-                    <% if devise_mapping.rememberable? -%>
-                      <div class="field">
-                        <%= f.check_box :remember_me %>
-                        <%= f.label :remember_me %>
-                      </div>
-                    <% end -%>
-
-                    <div class="actions">
-                      <%= f.submit "Log in", class: "btn mt-4 mb-3 btn-light rounded btn-lg text-primary" %>
-                    </div>
-                  <% end %>
-
-                  <%= render "devise/shared/links" %>
-                </div>
+            <% if devise_mapping.rememberable? -%>
+              <div class="form-group">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
               </div>
+            <% end -%>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "btn btn-primary w-100" %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
   </div>
 </main>
