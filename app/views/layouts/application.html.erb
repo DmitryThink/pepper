@@ -24,14 +24,17 @@
     </button>
       <div class="collapse navbar-collapse" id="navbar12"> <a class="navbar-brand d-none d-md-block" href="/"><i class="fa fa-fw fa-free-code-camp text-primary"></i>&nbsp;NOT PEPPER</a>
         <ul class="navbar-nav mx-auto">
-<!--          <li class="nav-item dropdown bg-dark">-->
-<!--            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu&nbsp;</a>-->
-<!--            <div class="dropdown-menu dropdown-menu-right">-->
-<!--              <a class="dropdown-item" href="/">Strona głowna</a>-->
-<!--              <div class="dropdown-divider"></div>-->
-<!--              <a class="dropdown-item" href="/">Kupony</a>-->
-<!--              <a class="dropdown-item" href="/">Wyprzedaże</a> </div>-->
-<!--          </li>-->
+          <li class="nav-item dropdown bg-dark">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tags&nbsp;</a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <% Tag.all.each do |tag| %>
+                <%= form_tag(home_index_path, method: :get) do %>
+                  <%= hidden_field_tag :tag, tag.name %>
+                  <button class="dropdown-item" type="submit"><%= tag.name %></button>
+                <% end %>
+              <% end %>
+            </div>
+          </li>
           <li class="nav-item"> <a class="nav-link" href="/">Gorące</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/home/new">Nowe</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/home/commented">Komentowane</a> </li>
@@ -40,7 +43,7 @@
           <div class="form-group row">
             <div class="col-10">
               <div class="input-group">
-                <%= form_tag(home_index_path, method: :get) do %>
+                <%= form_tag(request.fullpath, method: :get) do %>
                   <%= text_field_tag :text, @search_text, class: "form-control", placeholder: "Enter text"  %>
                   <div class="input-group-append">
                     <button name="button" type="submit" class="btn btn-sm active btn-outline-light"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -69,7 +72,11 @@
   <div class="container-fluid bg-primary ">
     <div class="row">
       <div class="col-sm-12">
+        <% if flash[:alert].present? %>
+          <h2 class="text-center m-2"><%=flash[:alert] %></h2>
+        <% else %>
         <h2 class="text-center m-2">Jesteś super!</h2>
+        <% end %>
       </div>
     </div>
   </div>

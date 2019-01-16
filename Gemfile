@@ -39,6 +39,8 @@ gem 'devise'
 gem 'activeadmin'
 
 gem "font-awesome-rails"
+
+gem 'active_skin'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

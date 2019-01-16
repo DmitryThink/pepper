@@ -24,12 +24,14 @@
             <div class="card-price d-flex">
               <span class="price text-primary font-weight-bold" ><%= @offer.actual_price %>zł</span>
               <span class="old-price text-muted" data-toggle="tooltip" data-placement="right" title="-<%= @offer.discount %>%"><%= @offer.original_price %>zł</span>
-              <a href="#" class="brand-name badge badge-secondary">Amazon</a>
+              <% if @offer.tags.first.present? %>
+                <a href="https://www.amazon.com/" class="brand-name badge badge-secondary"><%= @offer.tags.first.name %></a>
+              <% end %>
             </div>
             <p class="card-text"><%= @offer.description %></p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a class="btn btn-sm btn-primary " href="#">Go</a>
+                <a class="btn btn-sm btn-primary " href="<%= @offer.url %>">Go</a>
                 <%= link_to 'View', @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
               </div> <small class="text-muted">9 mins</small>
             </div>
@@ -49,7 +51,7 @@
         <h4>Add comment:</h4>
       <%= form_for @comment do |f| %>
         <div class="form-group">
-          <%= f.text_field :text , class: "form-control"%><br>
+          <%= f.text_field :text , class: "form-control", required: true%><br>
 
         <%= f.hidden_field :offer_id, value: @offer.id %>
         <%= f.submit "Send", class: "btn btn-primary w-100" %>
@@ -60,10 +62,14 @@
 
       <% @offer.comments.reverse.each do |comment| %>
         <div class="col">
-          <p>User: <%= comment.user.email %> <% if comment.user == current_user %>
-              <%= link_to "Delete", comment, method: :delete, class: "btn-danger" %>
-            <% end %></p>
+          <div class="d-flex flex-nowrap flex-row">
+            <img class="small-avatar mr-2" src="<%= image_url comment.user.avatar.url(:medium), class: "card-img-top" %>"/>
+            <p class="nickname"><a href="#" class="text-dark"><%= comment.user.name %></a></p>
 
+          </div>
+          <% if comment.user == current_user %>
+            <%= link_to "Delete", comment, method: :delete, class: "btn-danger" %>
+          <% end %>
           <p class="border-bottom border-gray pb-2 mb-0">Text: <%= comment.text %></p>
 
           <br>

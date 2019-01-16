@@ -23,12 +23,18 @@
                 <div class="card-price d-flex">
                   <span class="price text-primary font-weight-bold" ><%= offer.actual_price %>zł</span>
                   <span class="old-price text-muted" data-toggle="tooltip" data-placement="right" title="-<%= offer.discount %>%"><%= offer.original_price %>zł</span>
-                  <a href="https://www.amazon.com/" class="brand-name badge badge-secondary">Amazon</a>
+                  <% if offer.tags.first.present? %>
+                    <%= form_tag(home_index_path, method: :get) do %>
+                      <%= hidden_field_tag :tag, offer.tags.first.name %>
+                      <button  class="brand-name badge badge-secondary" type="submit"><%= offer.tags.first.name %></button>
+                    <% end %>
+<!--                    <a  class="brand-name badge badge-secondary"><%#= offer.tags.first.name %></a>-->
+                  <% end %>
                 </div>
                 <p class="card-text" style="height:66px;"><%= offer.description %></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a class="btn btn-sm btn-primary " href="https://www.amazon.com/">Go</a>
+                    <a class="btn btn-sm btn-primary " href="<%= offer.url %>">Go</a>
                     <%= link_to 'View', offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
                   </div> <small class="text-muted">9 mins</small>
                 </div>

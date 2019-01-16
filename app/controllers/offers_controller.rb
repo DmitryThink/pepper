@@ -5,8 +5,13 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.create!(offer_params)
-    redirect_to '/'
+    @offer = Offer.new(offer_params)
+    if @offer.valid?
+      @offer.save!
+      redirect_to '/'
+    else
+      render 'index'
+    end
   end
 
   def update

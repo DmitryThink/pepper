@@ -1,4 +1,5 @@
 ActiveAdmin.register Offer, as: "Confirmed Offer" do
+  permit_params :name, :url, :description, :original_price, :actual_price, :user
   index do
     selectable_column
     column :name
@@ -25,10 +26,17 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
     end
 
     panel :comments do
-      table_for(offer.comments) do
+      table_for(resource.comments) do
         column :id do |comment|
           link_to(comment.id, admin_offers_comment_url(comment.id))
         end
+        column :text
+        column :user
+      end
+    end
+
+    panel :tags do
+      table_for(resource.comments) do
         column :text
         column :user
       end
