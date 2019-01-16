@@ -1,7 +1,7 @@
 <div class="py-1">
   <div class="container">
     <div class="row d-flex flex-row">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-4">
+      <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white col-12 col-sm-6 col-md-4 col-lg-3 pb-4">
         <div class="card box-shadow">
           <div class="card-header">
             <ul class="nav card-header-pills counter-header">
@@ -36,8 +36,8 @@
           </div>
           <div class="card-footer d-flex flex-row justify-content-between">
             <div class="d-flex flex-nowrap flex-row">
-              <img class="small-avatar mr-2" src="<%= image_path("ryan.jpg") %>"/>
-              <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.email %>4</a></p>
+              <img class="small-avatar mr-2" src="<%= image_url @offer.user.avatar.url(:medium), class: "card-img-top" %>"/>
+              <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.name %></a></p>
             </div>
             <div class="">
               <%= link_to raw("<i class=\"fa fa-comments text-secondary\" aria-hidden=\"true\"></i> #{@offer.comments.count}"), @offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>
@@ -58,7 +58,7 @@
       <br>
         <h4 class="border-bottom border-gray pb-2 mb-0">Comments:</h4>
 
-      <% @offer.comments.each do |comment| %>
+      <% @offer.comments.reverse.each do |comment| %>
         <div class="col">
           <p>User: <%= comment.user.email %> <% if comment.user == current_user %>
               <%= link_to "Delete", comment, method: :delete, class: "btn-danger" %>
@@ -71,7 +71,6 @@
       <% end %>
       </div>
     </div>
-
   </div>
 </div>
 <br>

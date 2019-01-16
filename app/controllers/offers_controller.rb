@@ -27,4 +27,3 @@ class OffersController < ApplicationController
     prms
   end
 end
-:avatar
