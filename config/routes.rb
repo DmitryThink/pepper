@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'home/search'
   get 'home/new'
   get 'home/commented'
+  get 'home/by_user'
   resources :offers, only: [ :show ], :controller => :home
   resources :offers, only: [ :index, :create, :update ]
   resources :comments, only: [ :create, :destroy ]

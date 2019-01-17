@@ -14,5 +14,10 @@ class CreateAssociationTables < ActiveRecord::Migration[5.2]
       t.belongs_to :user, index: true
       t.belongs_to :offer, index: true
     end
+
+    create_table :tags_users do |t|
+      t.belongs_to :user, index: true
+      t.belongs_to :tag, index: true
+    end
   end
 end

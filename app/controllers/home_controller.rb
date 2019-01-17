@@ -32,6 +32,17 @@ class HomeController < ApplicationController
     @comment = Comment.new
   end
 
+  def by_user
+    offer_ids = []
+    current_user.tags.each do |tag|
+      offer_ids += tag.offers.pluck(:id)
+    end
+    puts offer_ids
+    @offers = Offer.where(id: offer_ids)
+    search
+    render :index
+  end
+
   private
 
   def search
