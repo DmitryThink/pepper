@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'home/index'
+  get 'home/index/:page', to: 'home#index'
   post 'home/search'
   get 'home/new'
   get 'home/commented'
