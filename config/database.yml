@@ -23,5 +23,6 @@ development:
 production:
   <<: *default
   database: pepper
+  host: ''
   username: deploy
   password: <%= ENV['WOLNA_DATABASE_PASSWORD'] %>
