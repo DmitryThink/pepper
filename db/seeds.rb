@@ -1,5 +1,5 @@
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-amd = AdminUser.create!(email: 'electonic@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+amd = AdminUser.create!(email: 'electonic@example.com', password: 'password', password_confirmation: 'password') 
 
 (0..32).each do |i|
   user = User.create!(name: "user#{i}", email: "user#{i}@example.com", password: 'password', password_confirmation: 'password', avatar: open("app/assets/images/ryan.jpg"))
