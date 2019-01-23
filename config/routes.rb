@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :offers, only: [ :show ], :controller => :home
   resources :offers, only: [ :index, :create, :update ]
   resources :comments, only: [ :create, :destroy ]
-  resources :tags, only: [ :show, :destroy ]
+  resources :tags, only: [ :index, :show, :destroy ]
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'

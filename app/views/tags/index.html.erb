@@ -1,0 +1,27 @@
+<main role="main" class="container">
+  <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
+    <h4 class="border-bottom border-gray pb-2 mb-0">Edit tags</h4>
+    <div class="row mt-4 pt-2">
+      <div class="col">
+
+
+        <table class="table">
+          <tbody>
+          <tr><td><h3>Your tags</h3></td></tr>
+          <% current_user.tags.each do |tag| %>
+            <tr>
+              <td> <span class="label label-success"><%= link_to "<button>#{tag.name}</button>".html_safe, tag, method: :delete, style: "text-color: white;" %></span></td>
+            </tr>
+          <% end %>
+          <tr><td><h3>Other tags</h3></td></tr>
+          <% Tag.where.not(id: current_user.tags).each do |tag| %>
+            <tr>
+              <td> <span class="label label-warning"><%= link_to "<button>#{tag.name}</button>".html_safe, tag, method: :get, style: "text-color: white;" %></span></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

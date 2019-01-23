@@ -1,5 +1,10 @@
 class TagsController < ApplicationController
   before_action :authenticate_user!
+
+  def index
+
+  end
+
   def show
     current_user.tags << Tag.find(params[:id])
     redirect_to request.referer
