@@ -69,3 +69,17 @@ p.nickname {
     margin-right: .28571em;
     border-radius: 50%;
 }
+.nav-avatar{
+    width: 2em;
+    height: 2em;
+   
+}
+.active {
+  font-weight: 600;
+}
+.modal-body {
+    padding: 0.05rem;
+}
+.cursor-poiter{
+    cursor: pointer;
+}

@@ -18,3 +18,15 @@
 //= require activestorage
 
 
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.modal').on('hidden.bs.modal', function(e) {
+        $(this).find('form')[0].reset();
+    });
+});
+
+$('#offer_avatar').change(function() {
+    var i = $(this).prev('label').clone();
+    var file = $('#offer_avatar')[0].files[0].name;
+    $(this).prev('label').text(file);
+});
