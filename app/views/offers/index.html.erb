@@ -2,12 +2,7 @@
   <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
     <h4 class="border-bottom border-gray pb-2 mb-0">Dodaj nową okazję</h4>
     <%= form_for(@offer, :html => {:multipart => true}, class: "mx-auto w-75 pt-3") do |f| %>
-      <% if @offer.errors.any? %>
-      Errors:<br>
-      <%= @offer.errors.messages.map { |k,v| "#{k} #{v}" }.join('<br>').html_safe %>
-      <br>
-      <br>
-      <% end %>
+
       <div class="form-group">
         <label class="text-dark" for="linkToDealInput">LINK </label><span class="text-muted"> </span>
         <%= f.text_field :url,  placeholder: "http://www.example.com/greatdeal...", aria_describedby: "linkToDealHelp", class: "form-control", required: true  %>

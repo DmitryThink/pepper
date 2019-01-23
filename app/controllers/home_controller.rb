@@ -3,16 +3,21 @@ class HomeController < ApplicationController
     @offers = Offer.where(confirmed: true)
     search
     tag
-    @offers =  @offers.left_joins(:users)
+    @all_offers =  @offers.left_joins(:users)
                   .group(:id)
-                  .order('COUNT(users.id) DESC')[size]
+                  .order('COUNT(users.id) DESC')
+    @offers = @all_offers[size]
+    @last_controller = "index"
   end
 
   def new
     @offers = Offer.where(confirmed: true)
     search
     tag
-    @offers =  @offers.order(created_at: :desc)[size]
+    @all_offers =  @offers.order(created_at: :desc)
+
+    @offers = @all_offers[size]
+    @last_controller = "new"
     render :index
   end
 
@@ -20,9 +25,12 @@ class HomeController < ApplicationController
     @offers = Offer.where(confirmed: true)
     search
     tag
-    @offers =  @offers.left_joins(:comments)
+    @all_offers =  @offers.left_joins(:comments)
                   .group(:id)
-                  .order('COUNT(comments.id) DESC')[size]
+                  .order('COUNT(comments.id) DESC')
+
+    @offers = @all_offers[size]
+    @last_controller = "commented"
     render :index
   end
 
@@ -36,7 +44,9 @@ class HomeController < ApplicationController
     current_user.tags.each do |tag|
       offer_ids += tag.offers.pluck(:id)
     end
-    @offers = Offer.where(id: offer_ids)[size]
+    @all_offers = Offer.where(id: offer_ids)
+    @offers = @all_offers[size] if @all_offers.present?
+    @last_controller = "by_user"
     render :index
   end
 
@@ -45,7 +55,7 @@ class HomeController < ApplicationController
   def search
     if params[:text]
       my_attributes = [:name, :description, :url]
-      queries = my_attributes.map { |attr| "offers.#{attr} LIKE '%#{params[:text]}%'" }
+      queries = my_attributes.map { |attr| "LOWER(offers.#{attr}) LIKE '%#{params[:text].downcase}%'" }
       @offers = @offers.where(queries.join(" OR "))
       @search_text = params[:text]
     end
@@ -62,9 +72,10 @@ class HomeController < ApplicationController
   end
 
   def size
-    items_size = 32
+    items_size = 3
     @size = 0..items_size-1
     @size = (page-1)*items_size..(page-1)*items_size+(items_size-1) if page > 1
     @size
   end
+
 end

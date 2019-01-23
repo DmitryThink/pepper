@@ -78,8 +78,10 @@
       <div class="col-sm-12">
         <% if flash[:alert].present? %>
           <h2 class="text-center m-2"><%=flash[:alert] %></h2>
+        <% elsif @offer.present? && @offer.errors.any? %>
+          <h2 class="text-center m-2"><%= @offer.errors.full_messages.first %></h2>
         <% else %>
-        <h2 class="text-center m-2">Jesteś super!</h2>
+          <h2 class="text-center m-2">Jesteś super!</h2>
         <% end %>
       </div>
     </div>

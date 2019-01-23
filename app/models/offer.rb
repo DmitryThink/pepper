@@ -1,3 +1,5 @@
+require 'uri'
+
 class Offer < ApplicationRecord
   # create for score counting
   has_and_belongs_to_many :users
@@ -12,6 +14,7 @@ class Offer < ApplicationRecord
   validates :name, :description, :actual_price, :original_price, :url, presence: true
   validates :url,  uniqueness: true
   validates_numericality_of :original_price, greater_than_or_equal_to: :actual_price
+  validates :url, :format => URI::regexp(%w(http https))
 
   def score
     users.count
