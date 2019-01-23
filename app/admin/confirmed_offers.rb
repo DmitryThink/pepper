@@ -10,6 +10,9 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
     column :url
     column :created_at
     column :user
+    column "Image" do |product|
+      image_tag product.avatar.url(:medium), class: 'my_image_size'
+    end
     actions
   end
 
@@ -23,6 +26,9 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
       row :url
       row :created_at
       row :user
+      row "Image" do |product|
+        image_tag product.avatar.url(:medium), class: 'my_image_size'
+      end
     end
 
     panel :comments do
@@ -36,14 +42,34 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
     end
 
     panel :tags do
-      table_for(resource.comments) do
-        column :text
-        column :user
+      table_for(resource.tags) do
+        column :name
+        column :delete do |tag|
+          link_to("Delete", tag_delete_admin_confirmed_offer_url(tag.id, resource.id),
+                  method: :post)
+        end
       end
     end
   end
 
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :description
+      f.input :original_price
+      f.input :actual_price
+      f.input :url
+      f.input :tag, :as => :select, :collection => Tag.all
+    end
+    f.actions
+  end
+
   controller do
+    def update
+      Offer.find(params[:id]).tags << Tag.find(params[:offer][:tag]) if params[:offer][:tag].present?
+      super
+    end
+
     def scoped_collection
       if current_admin_user.email == 'admin@example.com'
         end_of_association_chain.where(confirmed: true)
@@ -51,5 +77,10 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
         end_of_association_chain.where(confirmed: true).where(tags: current_admin_user.tags)
       end
     end
+  end
+
+  member_action :tag_delete, method: :post do
+    Offer.find(params[:format]).tags.delete(Tag.find(params[:id]))
+    redirect_to admin_confirmed_offer_url(params[:format])
   end
 end

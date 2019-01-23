@@ -20,19 +20,17 @@ ActiveAdmin.register Offer, as: "Unconfirmed Offer" do
     actions
   end
 
-  #
-  # show do
-  #   attributes_table do
-  #     row :name
-  #     row :description
-  #     row :actual_price
-  #     row :original_price
-  #     row :discount
-  #     row :url
-  #     row :created_at
-  #     row :user
-  #   end
-  # end
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :description
+      f.input :original_price
+      f.input :actual_price
+      f.input :url
+      f.input :tag, :as => :select, :collection => Tag.all
+    end
+    f.actions
+  end
 
   controller do
     def scoped_collection

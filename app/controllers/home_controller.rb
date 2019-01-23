@@ -72,7 +72,7 @@ class HomeController < ApplicationController
   end
 
   def size
-    items_size = 3
+    items_size = 36
     @size = 0..items_size-1
     @size = (page-1)*items_size..(page-1)*items_size+(items_size-1) if page > 1
     @size

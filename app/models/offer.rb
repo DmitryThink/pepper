@@ -1,11 +1,12 @@
 require 'uri'
 
 class Offer < ApplicationRecord
+  attr_reader :tag
   # create for score counting
   has_and_belongs_to_many :users
   # create for adding offers by user
   belongs_to :user
-  has_and_belongs_to_many :tags
+  has_and_belongs_to_many :tags, -> { distinct }
   has_many :comments
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
