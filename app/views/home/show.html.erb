@@ -37,7 +37,7 @@
           <div class="d-flex flex-nowrap flex-row">
             <% if @offer.user.present? %>
             <img class="small-avatar mr-2" src="<%= image_url @offer.user.avatar.url(:medium), class: "card-img-top" %>" />
-            <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.name %></a> <small class="text-muted"> Added: 9 mins </small></p>
+            <p class="nickname"><a href="#" class="text-dark"><%= @offer.user.name %></a> <small class="text-muted"></small></p>
             <% end %>
           </div>
           <div class="">
