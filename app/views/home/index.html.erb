@@ -17,7 +17,7 @@
                   </li>
                 </ul>
               </div>
-              <%= image_tag offer.avatar.url(:medium), class: "card-img-top" %>
+              <a href="offers/<%= offer.id %>"><%= image_tag offer.avatar.url(:medium), class: "card-img-top" %></a>
               <div class="card-body" style="height:210px;">
                 <p class="card-title font-weight-bold"><a href="#" class="text-dark" style="height:22px;"><%= offer.name %></a></p>
                 <div class="card-price d-flex">

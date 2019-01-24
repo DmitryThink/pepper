@@ -1,19 +1,19 @@
 <main role="main" class="container">
   <div class="col-8 mx-auto my-4 p-3 rounded-right rounded-left bg-white shadow-lg">
-    <h4 class="border-bottom border-gray pb-2 mb-0">Dodaj nową okazję</h4>
+    <h4 class="border-bottom border-gray pb-2 mb-0">Add new offer</h4>
     <%= form_for(@offer, :html => {:multipart => true}, class: "mx-auto w-75 pt-3") do |f| %>
 
       <div class="form-group">
         <label class="text-dark" for="linkToDealInput">LINK </label><span class="text-muted"> </span>
         <%= f.text_field :url,  placeholder: "http://www.example.com/greatdeal...", aria_describedby: "linkToDealHelp", class: "form-control", required: true  %>
 <!--        <input type="url" class="form-control" id="linkToDealInput" aria-describedby="linkToDealHelp" placeholder="http://www.example.com/greatdeal...">-->
-        <small id="linkToDealHelp" class="form-text text-muted">Wklej link ze znalezioną okazją lub informacjami o niej.</small>
+        <small id="linkToDealHelp" class="form-text text-muted">Paste url of an offer</small>
       </div>
 
-      <h6 class="border-bottom border-gray">Szczegóły</h6>
+      <h6 class="border-bottom border-gray">Options</h6>
       <div class="row">
         <div class="col-md-6 mb-3">
-          <label for="actualPrice">CENA OFERTY</label><span class="text-muted"> </span>
+          <label for="actualPrice">ACTUAL PRICE</label><span class="text-muted"> </span>
           <%= f.text_field :actual_price, class: "form-control", placeholder:"0,00", required: true  %>
 <!--          <input type="number" class="form-control" id="actualPrice" placeholder="0,00" value="" required="">-->
           <div class="invalid-feedback">
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="originalPrice">CENA REGULARNA</label><span class="text-muted"> </span>
+          <label for="originalPrice">ORIGINAL PRICE</label><span class="text-muted"> </span>
           <%= f.text_field :original_price, class: "form-control", placeholder:"0,00", required: true  %>
 <!--          <input type="number" class="form-control" id="originalPrice" placeholder="0,00" value="" required="">-->
           <div class="invalid-feedback">
@@ -30,17 +30,16 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="titleOffer">TYTUŁ OFERTY</label>
-        <%= f.text_field :name, class: "form-control", placeholder:"Krótki tytuł opisujący znalezioną okazję", required: true  %>
+        <label for="titleOffer">NAME</label>
+        <%= f.text_field :name, class: "form-control", placeholder:"A short title describing the offer found", required: true  %>
 <!--        <input type="text" class="form-control" id="titleOffer" placeholder="Krótki tytuł opisujący znalezioną okazję">-->
       </div>
       <div class="form-group">
-        <label for="descriptionOffer">OPIS</label>
-        <%= f.text_area :description, class: "form-control", rows: "4", placeholder:"Opisz znalezioną okazję własnymi słowami. Postaraj się wytłumaczyć, dlaczego jest najlepsza. Nie ograniczaj się tylko do wklejania tekstu...W przypadku ofert z zagranicznych sklepów nie zapomnij dodać w treści ceny zarówno w obcej jak i polskiej walucie ;)", required: true  %>
-<!--        <textarea class="form-control" id="descriptionOffer" rows="4" placeholder="Opisz znalezioną okazję własnymi słowami. Postaraj się wytłumaczyć, dlaczego jest najlepsza. Nie ograniczaj się tylko do wklejania tekstu...W przypadku ofert z zagranicznych sklepów nie zapomnij dodać w treści ceny zarówno w obcej jak i polskiej walucie ;)"></textarea>-->
+        <label for="descriptionOffer">Description</label>
+        <%= f.text_area :description, class: "form-control", rows: "4", placeholder:"Describe the opportunity found in your own words. Try to explain why it is the best. Do not limit yourself to pasting text ... In the case of offers from foreign stores, do not forget to add in the price in both foreign and Polish currency;)", required: true  %>
       </div>
       <div class="custom-file col-6">
-        <label class="custom-file-label" for="offer_avatar">Dodaj swój obrazek</label>
+        <label class="custom-file-label" for="offer_avatar">Add image</label>
         <%= f.file_field :avatar, class: "custom-file-input", required: true %>
       </div>
       <div class="row pt-4 pb-2">

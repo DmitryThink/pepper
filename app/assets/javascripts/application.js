@@ -30,3 +30,9 @@ $('#offer_avatar').change(function() {
     var file = $('#offer_avatar')[0].files[0].name;
     $(this).prev('label').text(file);
 });
+
+$('#user_avatar').change(function() {
+    var i = $(this).prev('label').clone();
+    var file = $('#user_avatar')[0].files[0].name;
+    $(this).prev('label').text(file);
+});

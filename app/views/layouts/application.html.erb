@@ -36,9 +36,9 @@
               <% end %>
             </div>
           </li>
-          <li class="nav-item"> <a class="nav-link" href="/">Gorące</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/home/new">Nowe</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/home/commented">Komentowane</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/">Hot</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/home/new">New</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/home/commented">Commented</a> </li>
           <% if user_signed_in? %>
             <li class="nav-item"> <a class="nav-link" href="/home/by_user">By your tags</a> </li>
           <% end %>
@@ -65,9 +65,7 @@
             <li class="nav-item"> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-primary'  %> </li>
           <% else %>
             <li class="nav-item"> <a class="nav-link cursor-poiter" data-toggle="modal" data-target="#loginModal">Login</a> </li>
-            <li class="nav-item"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
-              Register
-            </button>
+            <li class="nav-item"> <%= link_to "Register", new_user_registration_path,  :class => 'btn btn-primary'  %>
           <% end %>
           </li>
         </ul>
@@ -81,6 +79,8 @@
           <h2 class="text-center m-2"><%=flash[:alert] %></h2>
         <% elsif @offer.present? && @offer.errors.any? %>
           <h2 class="text-center m-2"><%= @offer.errors.full_messages.first %></h2>
+        <% elsif @last_controller.present? && !@offers.present? %>
+          <h2 class="text-center m-2">Nie ma ofert na tej stronie</h2>
         <% else %>
           <h2 class="text-center m-2">Jesteś super!</h2>
         <% end %>

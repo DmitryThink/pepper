@@ -1,4 +1,5 @@
 ActiveAdmin.register Offer, as: "Unconfirmed Offer" do
+  actions :index, :show, :edit, :update
   index do
     selectable_column
     column :name
@@ -22,6 +23,7 @@ ActiveAdmin.register Offer, as: "Unconfirmed Offer" do
 
   form do |f|
     f.inputs do
+      f.input :avatar, as: :file
       f.input :name
       f.input :description
       f.input :original_price

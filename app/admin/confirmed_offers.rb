@@ -1,5 +1,5 @@
 ActiveAdmin.register Offer, as: "Confirmed Offer" do
-  permit_params :name, :url, :description, :original_price, :actual_price, :user
+  permit_params :name, :url, :description, :original_price, :actual_price, :user, :avatar
   index do
     selectable_column
     column :name
@@ -54,7 +54,9 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
 
   form do |f|
     f.inputs do
+      f.input :avatar, as: :file
       f.input :name
+      f.input :users
       f.input :description
       f.input :original_price
       f.input :actual_price
@@ -65,6 +67,12 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
   end
 
   controller do
+    def create
+      byebug
+      super
+      byebug
+    end
+
     def update
       Offer.find(params[:id]).tags << Tag.find(params[:offer][:tag]) if params[:offer][:tag].present?
       super
