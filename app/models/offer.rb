@@ -5,7 +5,7 @@ class Offer < ApplicationRecord
   # create for score counting
   has_and_belongs_to_many :users
   # create for adding offers by user
-  belongs_to :user
+  belongs_to :user, optional: true
   has_and_belongs_to_many :tags, -> { distinct }
   has_many :comments
 

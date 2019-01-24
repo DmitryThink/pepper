@@ -56,7 +56,6 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
     f.inputs do
       f.input :avatar, as: :file
       f.input :name
-      f.input :users
       f.input :description
       f.input :original_price
       f.input :actual_price
@@ -68,9 +67,8 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
 
   controller do
     def create
-      byebug
       super
-      byebug
+      Offer.last.tags << Tag.find(params[:offer][:tag]) if params[:offer][:tag].present?
     end
 
     def update
@@ -85,6 +83,10 @@ ActiveAdmin.register Offer, as: "Confirmed Offer" do
         end_of_association_chain.where(confirmed: true).where(tags: current_admin_user.tags)
       end
     end
+
+    # def user_params
+    #   params.require(:offer).permit(:name, :description, :url, :actual_price, :original_price, :avatar, :user_id)
+    # end
   end
 
   member_action :tag_delete, method: :post do

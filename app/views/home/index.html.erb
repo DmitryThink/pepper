@@ -41,8 +41,10 @@
               </div>
               <div class="card-footer d-flex flex-row justify-content-between">
                 <div class="d-flex flex-nowrap flex-row">
+                  <% if offer.user.present? %>
                   <img class="small-avatar mr-2" src="<%= image_url offer.user.avatar.url(:medium), class: "card-img-top" %>"/>
                   <p class="nickname"><a href="#" class="text-dark"><%= offer.user.name %></a></p>
+                  <% end %>
                 </div>
                 <div class="">
                   <%= link_to raw("<i class=\"fa fa-comments text-secondary\" aria-hidden=\"true\"></i> #{offer.comments.count}"), offer, method: :get, class: "btn btn-sm btn-outline-secondary" %>

@@ -1,4 +1,5 @@
 ActiveAdmin.register Comment, as: "Offers Comment" do
+  actions :index, :show, :destroy, :update
   controller do
     def scoped_collection
       ids = []
